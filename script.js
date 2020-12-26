@@ -6,7 +6,7 @@ document.getElementById("query").style.display = "none";
 document.getElementById("query").onclick = function() {
     if (document.getElementById("serverid").value.length !== 18) alert("請輸入有效的伺服器ID!");
     else {
-        window.location.replace("https://blackcatbot.tk/app/?server="+document.getElementById("serverid").value);
+        urlParams.searchParams.set("server", document.getElementById("serverid").value);
     }
 };
 
