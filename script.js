@@ -6,7 +6,7 @@ document.getElementById("query").style.display = "none";
 document.getElementById("query").onclick = function() {
     if (document.getElementById("serverid").value.length !== 18) alert("請輸入有效的伺服器ID!");
     else {
-        urlParams.searchParams.set("server", document.getElementById("serverid").value);
+        window.location.replace(`https://blackcatbot.tk/app/?server=${document.getElementById("serverid").value}`)
     }
 };
 
@@ -17,8 +17,6 @@ if (urlParams.has("server")) {
             document.getElementById("loader").style.display = "none";
         }
         else {
-            var title = "";
-            var thumbnail = "";
             document.getElementById("loader").style.display = "none";
             setInterval(function() {
                 fetch("https://api.blackcatbot.tk/api/playing?server=" + urlParams.get("server"), {mode:"cors","Access-Control-Allow-Origin":"*"}).then(respone => respone.json()).then(json => {
