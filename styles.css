@@ -3,8 +3,41 @@ body {
     background-color: #2c2f33;
 }
 
+input, select, textarea, button {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
 .title {
     color: white;
+}
+
+.serverid {
+    background-color: #23272A;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: white;
+    height: 30px;
+    width: 250px;
+    text-align: center;
+    color: white;
+}
+
+.query {
+    background-color: #23272A;
+    border-radius: 15px;
+    width: 100px;
+    height: 30px;
+    color: white;
+    border-color: white;
+    border-style: solid;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
 }
 
 .container {

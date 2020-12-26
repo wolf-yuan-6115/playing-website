@@ -1,8 +1,19 @@
 const urlParams = new URLSearchParams(window.location.search);
+
+document.getElementById("serverid").style.display = "none";
+document.getElementById("query").style.display = "none";
+
+document.getElementById("query").onclick = function() {
+    if (document.getElementById("serverid").value.length !== 18) alert("請輸入有效的伺服器ID!");
+    else {
+        window.location.replace("https://blackcatbot.tk/app/?server="+document.getElementById("serverid").value);
+    }
+};
+
 if (urlParams.has("server")) {
-    fetch("http://api.blackcatbot.tk/api/exist?server=" + urlParams.get("server"), {mode:"cors","Access-Control-Allow-Origin":"*"}).then(respone => respone.json()).then(json => {
+    fetch("https://api.blackcatbot.tk/api/exist?server=" + urlParams.get("server"), {mode:"cors","Access-Control-Allow-Origin":"*"}).then(respone => respone.json()).then(json => {
         if (!json.exist) {
-            document.getElementById("songtitle").innerHTML = "無法取得伺服器的播放狀態...";
+            document.getElementById("songtitle").innerHTML = "無法取得伺服器的播放狀態... 請使用Black cat提供的網址或再次確認你的伺服器ID!";
             document.getElementById("loader").style.display = "none";
         }
         else {
@@ -10,7 +21,7 @@ if (urlParams.has("server")) {
             var thumbnail = "";
             document.getElementById("loader").style.display = "none";
             setInterval(function() {
-                fetch("http://api.blackcatbot.tk/api/playing?server=" + urlParams.get("server"), {mode:"cors","Access-Control-Allow-Origin":"*"}).then(respone => respone.json()).then(json => {
+                fetch("https://api.blackcatbot.tk/api/playing?server=" + urlParams.get("server"), {mode:"cors","Access-Control-Allow-Origin":"*"}).then(respone => respone.json()).then(json => {
                     if (json.playing) {
                         document.getElementById("loader").style.display = "inline-block";
                         document.getElementById("thumbnail").style.display = "inline-block";
@@ -20,6 +31,7 @@ if (urlParams.has("server")) {
                         
                         document.getElementById("thumbnail").src = json.thumbnail;
                         document.getElementById("songtitle").innerHTML = json.title;
+                        document.getElementById("link").href = json.url;
                         if (json.total <= 0 || json.total === null) {
                             var sec = Math.floor(json.now % 60);
                             var min = Math.floor((json.now - sec)/60);
@@ -41,16 +53,17 @@ if (urlParams.has("server")) {
                         document.getElementById("songtitle").style.color = "#ffffff";
                     }
                 }).catch(console.error);
-            }, 1000)
+            }, 1000);
         }
     }).catch(console.error);
 } else {
-    document.getElementById("songtitle").innerHTML = "你沒有指定要查詢哪個伺服器的播放狀態!";
+    document.getElementById("songtitle").innerHTML = "請輸入伺服器ID或是使用Black cat在播放時提供的網址!";
+    document.getElementById("serverid").style.display = "inline-block";
+    document.getElementById("query").style.display = "inline-block";
     document.getElementById("loader").style.display = "none";
     document.getElementById("thumbnail").style.display = "none";
     document.getElementById("time").style.display = "none";
     document.getElementById("container").style.backgroundColor = "rgba(0,0,0,0)";
-    document.getElementById("songtitle").style.color = "#ffffff"
+    document.getElementById("songtitle").style.color = "#ffffff";
 }
 
-//fetch("http://blackcatbot.herokuapp.com/api/playing?server=721001394248613978", {mode:"cors","Access-Control-Allow-Origin":"*"}).then(respone => respone.json()).then(json => console.log(json)).catch(console.error)
