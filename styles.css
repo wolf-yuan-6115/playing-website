@@ -1,3 +1,76 @@
 body {
+<<<<<<< HEAD
   font-family: 'Noto Sans TC', sans-serif;
+=======
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: #2c2f33;
+}
+
+input, select, textarea, button {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.title {
+    color: white;
+}
+
+.serverid {
+    background-color: #23272A;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: white;
+    height: 30px;
+    width: 250px;
+    text-align: center;
+    color: white;
+}
+
+.query {
+    background-color: #23272A;
+    border-radius: 15px;
+    width: 100px;
+    height: 30px;
+    color: white;
+    border-color: white;
+    border-style: solid;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.container {
+    text-align: center;
+    border-radius: 50px;
+    background-color: white;
+    padding: 10px;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #3498db;
+    width: 30px;
+    height: 30px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+.thumbnail {
+    border-radius: 30px;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+>>>>>>> b4a9d70379ac8fa56bf4703593e9b19a49a7b438
 }
