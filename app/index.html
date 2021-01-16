@@ -9,36 +9,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
   <link rel="shortcut icon" type="image/jpg" href="favicon.png"/>
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="boticon.png" alt="" width="30" height="30" class="d-inline-block align-top">&nbsp;Black cat</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="https://blackcatbot.tk">首頁</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="https://blackcatbot.tk/app">機器人音樂面板</a>
-            </li>
-          </ul>
-        </div>
+<body class="bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="https://blackcatbot.tk">
+      <img src="boticon.png" alt="Black cat logo" width="75px" height="75px" class="d-inline align-top img-thumbnail">
+    </a>
+    <h4 class="d-inline text-light">Black cat</h4>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">首頁</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/index.html">機器人音樂面板</a>
+        </li>
+      </ul>
     </div>
+  </div>
   </nav>
+  <br>
   <div class="container" id="container">
-      <img src="" class="thumbnail" id="thumbnail" width="180" height="180">
-      <center><div class="loader" id="loader"></div></center>
-      <a href="" id="link" class="link"><p class="text-light fs-4" id="songtitle">正在取得歌曲資訊...</p></a>
-      <center>
-        <input type="text" class="form-control bg-dark text-light" id="serverid" placeholder="12345678" style="text-align:center;border-radius:30px" aria-describedby="serverid">
-      </center>
-      <br>
-      <button type="button" id="query" class="btn btn-outline-light" style="border-radius:30px">查詢!</button>
-      <p class="text-light fs-6" id="time"></p>
+    <img src="" class="thumbnail" id="thumbnail" width="180" height="180">
+    <center><div class="loader" id="loader"></div></center>
+    <a href="" id="link" class="link"><p class="text-light fs-4" id="songtitle">正在取得歌曲資訊...</p></a>
+    <center>
+      <input type="text" class="form-control bg-dark text-light rounded-pill" id="serverid" placeholder="12345678" style="text-align:center;" aria-describedby="serverid">
+    </center>
+    <br>
+    <button type="button" id="query" class="btn btn-outline-light rounded-pill">查詢!</button>
+    <p class="text-light fs-6" id="time"></p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   <script src="script.js"></script>

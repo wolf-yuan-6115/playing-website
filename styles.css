@@ -2,6 +2,10 @@ body {
   font-family: 'Noto Sans TC', sans-serif;
 }
 
+footer {
+  font-family: 'Poppins', sans-serif;
+}
+
 nav {
     border-radius: 10px;
     top: 20px;
@@ -10,9 +14,12 @@ nav {
     box-shadow: 0px 2px 5px 1px rgba(64,60,67,.16);
 }
 
-nav > div > a > img[src="boticon.png"] {
-    height: 75px;
-    width: 75px;
-    border-radius: 50%;
-    padding: 0px;
+.bot-title {
+    font-size: 80px;
+    font-family: 'Poppins', sans-serif;
+    transition: 1s;
+}
+
+.bot-title:hover {
+    font-size: 90px;
 }

@@ -2,62 +2,116 @@
 <html>
 <head>
   <title>Black cat</title>
+  <meta name="Black cat" content="Black cat的小窩">
+  <meta name="og:title" property="og:title" content="Black cat">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+  <link rel="stylesheet" href="styles.css">
   <link rel="shortcut icon" type="image/jpg" href="favicon.png"/>
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="boticon.png" alt="Black cat logo" width="75px" width="75px" class="d-inline align-top img-thumbnail">
-      </a>
-      <h4 class="d-inline text-light">Black cat</h1>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="https://blackcatbot.tk">首頁</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://blackcatbot.tk/app">機器人音樂面板</a>
-          </li>
-        </ul>
+<body class="bg-dark">
+  <!-- Nav bar -->
+  <div class="sticky-top bg-transparent">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="https://blackcatbot.tk">
+          <img src="boticon.png" alt="Black cat logo" width="75px" height="75px" class="d-inline align-top img-thumbnail" style="border-radius: 50%">
+        </a>
+        <h4 class="d-inline text-light">Black cat</h4>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon text-light"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/app/index.html">機器人音樂面板</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <!--div id="carouselExampleCaptions" class="carousel slide bg-dark text-white text-center" data-bs-ride="carousel" data-bs-interval="2000">
+    </nav>
+  </div>
+  <br>
+  <!-- title -->
+  <div class="carousel slide bg-dark text-white text-center" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-          <p class="fs-3">歡迎來到Black cat的新網站!</p>
+        <p class="fs-4">歡迎來到Black cat的新網站!</p>
       </div>
       <div class="carousel-item">
-          <p class="fs-3">歡迎至Discord伺服器提供回饋</p>
+        <p class="fs-4">歡迎至Discord伺服器提供回饋</p>
       </div>
       <div class="carousel-item">
-          <p class="fs-3"><a href="https://blackcatbot.tk/discord" class="link-info">點我加入伺服器</a></p>
+        <p class="fs-4"><a href="https://blackcatbot.tk/discord" class="link-info">點我加入伺服器</a></p>
       </div>
     </div>
   </div>
-  <footer class="bg-dark">
-    <div class="row">
-      <div class="col">
-        <img src="boticon.png" class="bg-dark border-0 position-relative" height="100" width="100">
+  <!-- feature -->
+  <section style="padding: 50px">
+    <center>
+      <div>
+        <p class="text-start text-light bot-title">Black<br>Cat</p>
       </div>
-      <div class="col-9 text-white">
-        <center>
-          <p class="fs-7">Black cat</p>
-          <p class="fs-9 text-info">由Wolf yuan開發</p>
-        </center>
+    </center>
+  </section>
+  <div class="container rounded text-light">
+    <center>
+      <p class="fs-2" style="color:#99ccff">選擇Black cat的好處</p>
+      <br>
+      <div class="row rounded-pill" style="background-color: #66cccc">
+        <div class="col-md-4">
+          <img src="/assets/music.svg" height="80px" width="80px">
+        </div>
+        <div class="col-md-4">
+          <p class="fs-2">可以播放你喜歡的音樂</p>
+        </div>
+      </div>
+      <br>
+      <div class="row rounded-pill" style="background-color: #66ccff">
+        <div class="col-md-4">
+          <img src="/assets/secure.png" height="80px" width="80px">
+        </div>
+        <div class="col-md-4">
+          <p class="fs-2">安全的機器人</p>
+        </div>
+      </div>
+      <br>
+      <div class="row rounded-pill" style="background-color: #99ccff">
+        <div class="col-md-4">
+          <img src="/assets/24h.png" height="80px" width="80px">
+        </div>
+        <div class="col-md-4">
+          <p class="fs-2">24小時上線</p>
+        </div>
+      </div>
+    </center>
+  </div>
+  <br>
+  <!-- invite -->
+  <div class="container text-center text-light">
+    <div class="row">
+      <div class="col-md-8">
+        <p class="fs-2">想試試看?</p>
+        <p class="fs-6">用過Black cat，就回不去了!!</p>
+      </div>
+      <div class="col-md-4">
+        <a class="btn btn-primary" href="https://blackcatbot.tk/blackcat">邀請機器人</a>
       </div>
     </div>
-    
-  </footer-->
+  </div>
+  <br>
+  <footer class="text-center text-light" style="background-color: #6699ff;padding-top: 20px; padding-bottom: 20px">
+    <p class="fs-5">© 2021 Lollipop developer team</p>
+    <p class="fs-6">Made by Wolf yuan</p>
+    <p style="font-size: 10px">Icons by Freepik on flaticon</p>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
